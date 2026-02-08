@@ -34,7 +34,7 @@ using namespace std;
         cout<< "Average Cost: $" << r1.averageCost << endl;
         cout<< "Dinner Only: ";
 
-        if(r.dinnerOnly)
+        if(r1.dinnerOnly)
             cout << "Yes" << endl;
         else
             cout << "No" << endl;
@@ -43,10 +43,28 @@ using namespace std;
 
 
     int main() {
+        cout<< "Enter information for Restaurant 1\n";
         Restaurant r1 = createRestaurant();
+        cin.ignore();
+        
+        cout << "\nEnter information for Restaurant 2\n";
+        Restaurant r2 = createRestaurant();
+        cin.ignore();
+        
+        cout << "\nEnter information for Restaurant 3\n";
+        Restaurant r3 = createRestaurant();
+        cin.ignore();
 
-        // Testing to ensure the restaurant was created correctly
-        cout << "\nTesting: Restaurant Name: " << r1.name << endl;
+        cout << "\nEnter information for Restaurant 4\n";
+        Restaurant r4 = createRestaurant();
+        
+
+        
+        //Displays all restaurant information together
+        displayRestaurant(r1);
+        displayRestaurant(r2);
+        displayRestaurant(r3);
+        displayRestaurant(r4);
 
         return 0;
     
