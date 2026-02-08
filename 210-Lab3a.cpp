@@ -26,6 +26,21 @@ using namespace std;
         return temp;
     }
 
+    
+    void displayRestaurant(Restaurant r1){
+        cout<< "\n-------------------------------\n";
+        cout<< "Restaurant Name: " << r1.name << endl;
+        cout<< "Address: " << r1.address << endl;
+        cout<< "Average Cost: $" << r1.averageCost << endl;
+        cout<< "Dinner Only: ";
+
+        if(r.dinnerOnly)
+            cout << "Yes" << endl;
+        else
+            cout << "No" << endl;
+        cout << "Max Occupancy: " << r1.maxOccupancy << endl;
+    }
+
 
     int main() {
         Restaurant r1 = createRestaurant();
